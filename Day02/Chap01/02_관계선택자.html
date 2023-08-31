@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>관계선택자</title>
+
+    <style>
+        article { border: 3px solid orange;}
+        aside { border: 3px solid hotpink; margin: 10px; }   /* 테두리를 실선으로 표현함 */
+        /* 하위 선택자 */
+        /* - 해당 요소 내부에 있는 요소를 선택 */
+        /* (요소) (요소) : 띄어쓰기를 한 계층으로 구분 */
+
+        article section ul {
+            /* (스타일 속성) : (속성값); */
+            color: red;
+        }
+
+        /*  자식 선택자 */
+        /* - 바로 밑에 있는 하위 요소만을 선택 */
+        /* (기호: >) */
+        article>section ul {
+            /* li태그에 블루값이 됨.. 왜냐면 이런 류가 있음. 스타일은 상속이 된다. */
+            color: blue;
+        }
+
+        /* 인접 선택자 */
+        /* - A+B : A와 인접한 요소 B를 선택 */
+        /*  - A요소 다음(뒤)에 나오는 요소만 인식 */
+        h1+h3 {
+            color: cornflowerblue;
+            font-size: 30px;
+        }
+
+        /* 형제자매 선택자 */
+        /* A~B : 같은 부모를 갖는 A와 형제자매 요소인 B를 선택 */
+        article ~ article h2 {
+            color: white;
+            background-color: red;
+            padding: 5px;
+        }
+
+        /* 형제자매 선택자 */
+        /* [형제자매인 선택자]~[스타일적용할 선택자] */
+        p~span {
+            color: hotpink;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <!-- div.logo{로고} -->
+        <div class="logo">로고</div>
+        <!-- ul>(li{메뉴$})*2 -->      <!--  "unordered list" -->
+        <ul>
+            <li>메뉴1</li>
+            <li>메뉴2</li>
+        </ul>
+    </header>
+
+    <article>
+        <h1>제목</h1>
+        <h3>설명</h3>
+        <section>
+            <h2>부제목</h2>
+            <!-- ul>(li{리스트 $})*3 -->
+            <ul>
+                <li>리스트 1</li>
+                <li>리스트 2</li>
+                <li>리스트 3</li>
+            </ul>
+        </section>
+        <!-- aside>(h2+h3+section>(ul>(li{사이드 메뉴 $})*3)) -->
+        <aside>
+            <h2>사이드바 제목</h2>
+            <h3>설명</h3>
+            <section>
+                <ul>
+                    <li>사이드 메뉴 1</li>
+                    <li>사이드 메뉴 2</li>
+                    <li>사이드 메뉴 3</li>
+                </ul>
+            </section>
+        </aside>
+    </article>
+        <!-- aside :  부가적인 콘텐츠나 사이드바와 같이 본문(content)과는 관련성이 적은 내용을 
+            나타내는 요소입니다. 이 요소는 주로 본문의 주요 내용과는 독립적이지만 관련 정보로써 
+            사용되며, 일반적으로 사이드바, 광고, 팁, 레이터(Later) 박스, 인용 등을 나타낼 때 
+            사용됩니다. -->
+
+
+    <article>
+        <h1>제목1</h1>
+        <h2>소제목1</h2>
+        <section>내용1</section>
+
+        <h2>소제목2</h2>
+        <section>내용2</section>
+
+        <h2>소제목3</h2>
+        <section>내용3</section>
+
+        <p>p 태그 - 형제 자매 요소</p>
+        <span>span 태그 - 형제 자매 요소</span>
+        <p>p 태그 - 형제 자매 요소</p>
+        <span>span 태그 - 형제 자매 요소</span>
+        <p>p 태그 - 형제 자매 요소</p>
+        <span>span 태그 - 형제 자매 요소</span>
+    </article>
+
+    <article>
+        <h2>article ~ article (뒤의 요소에만 적용)</h2>
+    </article>
+    <footer>
+        푸터
+    </footer>
+</body>
+</html>

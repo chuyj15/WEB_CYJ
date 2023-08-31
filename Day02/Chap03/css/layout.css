@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+/* TODO: 여기에 작성해보세요 */
+* {
+    margin: 0; /* m0 */
+    padding: 0; /* p0 */
+}
+
+/* 
+    태그 선택자
+    : 태그의 이르믕로 요소를 선택하는 방식
+*/
+header {
+    height: 85px;
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+header h1 {
+    float: left;        /* fl */
+    font-size: 1.8rem;  /* fz1.8rem */
+    /* 
+        rem : html(루트) 요소에 대한 배율로 크기 지정
+         CSS에서 사용되는 단위(unit)의 하나로, "루트 엘리먼트(root element)(HTML의 <html> 요소)의 글꼴 크기"를
+         기준으로 상대적인 크기를 지정하는 단위입니다. 이를 "루트 엘리먼트 엠(em)"이라고 읽습니다.
+    */
+}
+
+header ul {
+    float: right;           /* flr */
+    list-style-type: none;  /* lstn */
+    /* 마커(불릿)를 없앱니다.  */
+}
+
+header ul li {
+    display: inline-block;  /* dib */
+    /* inline-block은 인라인 박스와 블록 박스의 특성을 함께 가지며, 한 줄에 여러 요소를 나란히 배치할 수 있습니다. */
+}
+
+header ul li a {
+    text-decoration: none;      /* tdn */
+    color: black;            /* c:black */
+    padding: 10px 14px;         /* p10px14px */
+}
+
+article {
+    min-height: 500px;      /* mh500 */
+    background-color: aquamarine;
+}
+
+article section {
+    float: left;        /* fl */
+}
+
+article aside {
+    float: right;       /* flr */
+    width: 200px;       /* w200 */
+    height: 500px;      /* h500 */
+    box-sizing: border-box;   
+    /* bxs */
+
+    background-color: #fedd31; /* backco */
+    padding: 20px;      /* p20 */
+    text-align: center; /* tac */
+}
+
+footer {
+    height: 20px;       /* h20 */
+    line-height: 20px;  /* lh20px */
+    background-color: #c0dce7;  /* backco */
+    text-align: center; /* tac */
+    padding: 20px;  /* p20 */
+}
+
