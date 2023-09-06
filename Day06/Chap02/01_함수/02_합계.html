@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수로 합계 구하기</title>
+    <script>
+        let arr = [1,2,3,4,5]
+        function sum(arr) {
+            let sum=0
+            for (let i = 0; i < arr.length; i++) {
+                sum += arr[i]
+            }
+            return sum
+        }
+        //함수정의가 가장 먼저 메모리에 할당되기 때문에~
+        //Hoisting (들어[끌어]올리다)
+
+        document.write(`합계 : ${sum(arr)}`)        //함수호출 중
+        //이걸 함수정의 이전으로 옮겨도 호출이 됨. 선언적함수이기 때문에
+
+        /* 
+        선언적 함수 정의
+        - 함수정의가 함수호출보다 뒤에 있어도, 호출이 가능하다
+        * Hoisting (호이스팅)
+        : 변수나 함수의 정의가 scope(범위)의 최상단으로 끌어올려지는 것
+        */
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연산자</title>
+    <script>
+        let a=10
+        let b='10'
+        let c='10'
+        let d='test'
+        let e='test'
+        let f
+        //undefined 가 들어있음. 
+
+        console.log('a==b : ' + (a==b));
+        //괄호를 꼭 써줘야 함. 안그러면 +가 먼저 됨. 
+        console.log('a===b : ' + (a===b));
+        console.log('b==c : ' + (b==c));
+        console.log('b===c : ' + (b===c));
+        console.log('d==e : ' + (d==e));
+        console.log('d===e : ' + (d===e));
+
+        console.log(f+a);
+        //+가 산술연산자가 됨. 
+        // NaN : Not a Number
+        //  -숫자 연산을 할 때, 유효한 숫자 데이터를 연산할 수 없을 때 반환
+
+        console.log(f+b);
+        //undefined10
+        //+가 문자열연결연산자가 됨. 
+        //f의 undefined를 문자열로 변환시키고 그거랑 '10'과 연결되는 거임~!
+
+        //자바에서는 값 비교할 때 equals를 사용했었음. 
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

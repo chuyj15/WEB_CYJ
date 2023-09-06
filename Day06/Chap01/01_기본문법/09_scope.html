@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scope(변수 범위를 의미함)</title>
+    <script>
+        //(1)
+        //Identifier 'local3' has already been declared 
+        // function test3() {
+        //     let local3 = 10
+
+        //     if (local3>0) {
+        //         var local3 = 20
+        //     }
+
+        //     //let은 변수 중복허용을 안해줌. 
+        // }
+
+        //test3()
+
+        //(2)
+        // function test() {
+        //     var local = 10
+
+        //     if (local>0) {
+        //         let local = 20
+        //         console.log(local); //20
+        //     }
+
+        //     console.log(local); //10
+
+        //     //let은 변수 중복허용을 안해줌. 
+        // }
+
+        // test()
+
+        // function test2() {
+        //     let local2 = 10
+        //     if (local2>0) {
+        //         let local2 = 20
+        //         console.log(local2);    //20
+        //     }
+        //     console.log(local2);    //10
+        //     //let은 변수 중복허용을 안해주지만 다른 scope에서는 가능함. 
+        // }
+        // test2()
+
+        console.log(`test5 : ${test5}`);        // undefined   //이것도 호이스팅이 된 경우라고 볼 수 있음
+        var test5 = 'test'
+        
+        console.log(`test5 : ${test6}`);        //Cannot access 'test6' before initialization
+        let test6 = 'test'
+        
+        //Cannot access 'local4' before initialization
+        // function test4() {
+        //     let local4 = 10
+
+        //     if (local4>0) {
+        //         console.log(local4);
+        //         let local4 = 20
+        //         console.log(local4);
+        //     }
+
+        //     console.log(local4);
+
+        //     //let은 변수 중복허용을 안해줌. 
+        // }
+        // test4()
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

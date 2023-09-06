@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수의 정의와 호출</title>
+    <script>
+
+    //    익명함수()          //함수정의 전에 호출불가
+        선언적함수()        //함수정의 전에 호출가능(호이스팅)
+
+        
+        //익명 함수 정의
+        const 익명함수 = function(){
+            console.log('익명함수 호출!');
+        }
+
+        //선언적 함수 정의
+        function 선언적함수() {
+            console.log('선언적 함수 호출!');
+        }
+        
+        //함수 호출
+        선언적함수()
+        익명함수()
+        //출력
+        console.log(typeof 익명함수);   //function
+        console.log( 익명함수); //함수구조가 나옴
+                //  ƒ (){
+                //     console.log('익명함수 호출!');
+                // }
+
+        //console.log( 익명함수() ); 
+        //익명함수()가 호출되고, 반환하는 값이 입력되는 것
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

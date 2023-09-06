@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if 조건문</title>
+    <script>
+        //if 조건문
+        let a = 30
+        let b = 20
+
+        if (a>b) {
+            console.log(`${a}이 ${b}보다 크다`);
+        }
+
+        let input = prompt('숫자를 입력하세요')
+        // prompt는 입력받은 값을 string타입으로 반환해준다. 
+
+        //(input > 0)  이 때는 input이 num타입으로 변환이 된다. 
+        if (input > 0) {
+            alert('양수입니다')
+        }
+        if (input <0 ) {
+            alert('음수입니다')
+        }
+
+        console.log(input+100);
+        //50100 문자열 +가 됨.
+        //숫자로 하려면 변환해줘야 함. 
+        
+        console.log( Number(input) + 100 );
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
