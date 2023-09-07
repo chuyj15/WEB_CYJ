@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소 접근</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let $container = document.getElementsByClassName('container')[0]
+
+            //childNodes : 해당 요소의 자식 노드들
+            console.log($container.childNodes); 
+            //h1태그
+            console.log($container.childNodes[1]); 
+            //ul태그
+            console.log($container.childNodes[3]);
+
+            let $section1 = document.getElementsByTagName('section')[0]
+            console.log($section1.firstChild);
+            console.log($section1.childNodes[1]);
+            console.log($section1.lastChild);
+            console.log($section1.childNodes[1].previousSibling);
+            console.log($section1.childNodes[1].nextSibling);
+
+            /* 
+            parentNode : 부모노드
+            childNodes : 자식 노드들
+            firstChild : 첫번째 자식 노드
+            lastChild : 마지막 자식 노드
+            previousSibling : 이전 형제 노드
+            nextSibling : 다음 형제 노드
+             */
+
+             /* 
+             노드 정보
+             - nodeName     : HTML 태그 이름을 대문자로 저장한 정보
+             - nodeValue    : 노드의 값
+             - nodeType     : 
+                            * 요소노드 : 1
+                                <div>, <p>, <a>와 같은 HTML 요소
+                            * 속성노드 : 2
+                                <a href="http://example.com">의 href 속성
+                            * 텍스트노드 : 3
+                                <p>이것은 텍스트 노드입니다.</p>
+                            * 주석노드 : 8
+                            * 문서노드 : 9
+                                전체 HTML 또는 XML 문서
+             */
+
+             let item1 = document.getElementById('item1')
+             console.log(item1.nodeName); //DIV
+             //노드 계층 안에서는 div태그의 value가 없는거임.. 미친거같음..ㅋㅋ
+             console.log(item1.nodeValue); //null
+             console.log(item1.firstChild.nodeValue);//아이템1
+             console.log(item1.nodeType);//1
+            console.log(item1.attributes);//NamedNodeMap {0: class, 1: id, class: class, id: id, length: 2}
+
+             let ps = document.getElementsByTagName('p')
+             let p = ps[0]
+             console.log(p.nodeValue);//null
+        })
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>제목입니다</h1>
+        <!-- text 는 줄바꿈(엔터)임. 이것도 노드로 치네....아오 -->
+        <ul class="list">
+            <li><a href="">리스트1</a></li>
+            <li><a href="">리스트2</a></li>
+            <li><a href="">리스트3</a></li>
+            <li><a href="">리스트4</a></li>
+        </ul>
+    </div>
+    <section><img src="" alt="이미지1"><img src="" alt="이미지2"><img src="" alt="이미지3"></section>
+    <section>
+        <div class="item" id="item1">아이템1</div>
+        <div class="item" id="item2">아이템2</div>
+        <div class="item" id="item3">아이템3</div>
+        <div class="item" id="item4s">아이템4</div>
+    </section>
+
+    <p>텍스트노드입니다.</p>
+</body>
+</html>

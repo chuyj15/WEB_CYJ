@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window</title>
+    <script>
+        document.write(`윈도우 가로 : ${window.innerWidth} <br>`)
+        document.write(`윈도우 가로 : ${window.innerHeight} <br>`)
+        document.write(`제목 : ${document.title} <br>`)
+        console.log(window.innerWidth); //2400  (픽셀단위)
+        console.log(window.innerHeight); //542
+
+        //팝업 창
+        //window.open('URL', 팝업창이름, 옵션)s
+        let option = {
+            width : 300,
+            hight : 400
+        }
+        //let popup = window.open('http://www.naver.com', '네이버', 'width=300, height=400')
+        let popup = window.open('http://www.naver.com', '네이버', option)
+
+        document.addEventListener('DOMContentLoaded', ()=>{
+            let btn = document.getElementById('btn')
+            btn.addEventListener('click', () => {
+                popup.close()   //팝업창 닫기
+            })
+        })
+    </script>
+</head>
+<body>
+    <button id="btn">팝업 닫기</button>
+</body>
+</html>

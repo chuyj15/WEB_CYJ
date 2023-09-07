@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM요소</title>
+    <script>
+        let head = document.head        //이 시점에서 헤드접근가능
+        let body = document.body        //바디는 못가져왔으니까....
+        let title = document.title
+        let url =document.URL
+
+        
+        //문서 준비 이벤트
+        document.addEventListener('DOMContentLoaded', () => {
+            let aList = document.anchors
+            let form = document.forms       //폼태그를 다 가지고와줌
+            let img = document.images
+            console.log(head);  
+            console.log(body); 
+            console.log(url);
+            document.getElementById('title').innerHTML = title
+            document.getElementById('url').innerHTML = url
+            console.log(aList);
+            console.log(aList[0]);
+            console.log(aList[1]);
+            console.log(form);
+            console.log(form[0]);
+            console.log(form[1]);
+            //form[0].submit()        //form 태그 제출
+            console.log(img);
+            console.log(img[0]);
+            console.log(img[1]);
+            img[1].src = 'X.jpg'
+        })
+    </script>
+</head>
+<body>
+    <h1 id="title"></h1>
+    <h3 id="url"></h3>
+    <ul>
+        <!-- "a" 태그는 "anchor" 태그의 약자 -->
+        <!--  "href"는 "Hypertext Reference"의 약자 -->
+        <!-- a태그는 name속성을 주었을 때만 랜더링되나봐...! -->
+        <li><a href="http://naver.com" name="a">http://naver.com</a></li>
+        <li><a href="http://kakao.com" name="b">http://kakao.com</a></li>
+    </ul>
+
+    <form action=""></form>
+    <form action=""></form>
+
+    <img src="a.jpg" alt="">
+    <!-- <img src="a.jpg" alt="">
+    <img src="a.jpg" alt=""> -->
+</body>
+</html>
