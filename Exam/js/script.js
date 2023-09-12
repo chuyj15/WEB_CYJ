@@ -1,5 +1,4 @@
 $(function() {
-
     // 슬릭 슬라이드 시작!
     $('.slide-container').slick({
         dots: false,
@@ -28,7 +27,7 @@ $(function() {
         nextArrow: '<button class="slide-arrow next-arrow"></btton>',
 
         //
-        asNavFor: '.slide-nav',
+        // asNavFor: '.slide-nav',
 
         /* 반응형 */
         responsive: [
@@ -57,20 +56,20 @@ $(function() {
         ]
     })
 
-    $('.slide-nav').slick({
-        dots: false,
-        arrows: false,
-        slidesToShow: 5,
-        slidesToScroll: 1,
+    // $('.slide-nav').slick({
+    //     dots: false,
+    //     arrows: false,
+    //     slidesToShow: 5,
+    //     slidesToScroll: 1,
 
-        pauseOnDotsHover: true,         // 페이지네이션 호버 시 자동재생 멈춤
-        pauseOnFocus: true,             // 포커스 시, 자동재생 멈춤
-        pauseOnHover: true,             // 호버 시, 자동재생 멈춤
+    //     pauseOnDotsHover: true,         // 페이지네이션 호버 시 자동재생 멈춤
+    //     pauseOnFocus: true,             // 포커스 시, 자동재생 멈춤
+    //     pauseOnHover: true,             // 호버 시, 자동재생 멈춤
         
-        centerMode: true,
-        focusOnSelect: true,
-        asNavFor: '.slide-container',
-    })
+    //     centerMode: true,
+    //     focusOnSelect: true,
+    //     asNavFor: '.slide-container',
+    // })
 
 
 
