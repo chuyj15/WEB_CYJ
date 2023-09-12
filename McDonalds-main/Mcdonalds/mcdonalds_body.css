@@ -1,0 +1,64 @@
+#contents{
+    font-family: 'Gothic A1', sans-serif;
+    color: #292929;
+    border: solid 0px red;
+    margin-top: 20px;
+    overflow:hidden;
+    height: 1200px;
+}
+
+#contents > h1 {
+    font-size: 40px;
+    margin-left: 350px;
+    margin-bottom: 30px;
+}
+
+#contents > .contents_main > ul > ul{
+    border: solid 0px green;
+    margin-bottom: 50px;
+    float: left;
+}
+
+#contents > .contents_main > ul > ul:nth-child(1){
+    margin-left: 270px
+}
+
+#contents > .contents_main > ul > ul:nth-child(4){
+    margin-left: 270px
+}
+
+#contents > .contents_main img {
+    width: 366px;
+    height: 300px;
+    border-radius: 5% 5% 0px 0px;
+}
+
+#contents > .contents_main div {
+    margin-top: 0px;
+    font-size: 18px;
+    border-radius: 0px 0px 5% 5%;
+    margin-left: 30px;
+    margin-bottom: 50px;
+    margin-top: 15px;
+    line-height: 200%;
+    font-weight: bolder;
+}
+
+#contents > .contents_more {
+    position: relative;
+    width: 90px;
+    height: 90px;
+    line-height: 90px;
+    border-radius: 90px;
+    background-color: orange;
+    top: 1000px;
+    margin: 0px auto;
+}
+
+#contents > .contents_more > div{
+    position:absolute;
+    font-size: 30px;
+    text-align: center;
+    left:36px;
+    top: 3px;
+}

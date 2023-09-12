@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스크린(Screen)</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', ()=>{
+            //사용자 화면의 크기(모니터 사이즈)
+            //screen : 디스플레이의 화면에 대한 정보
+            document.write(`<h3>현재 사용자 화면 크기(가로) : ${window.screen.width}</h3>`) //1920
+            document.write(`<h3>현재 사용자 화면 크기(세로) : ${window.screen.height}</h3>`)    //1080
+            //실제 사용가능한 크기
+            document.write(`<h3>사용 가능 화면 크기(가로) : ${window.screen.availWidth}</h3>`) //1920
+            document.write(`<h3>사용 가능 화면 크기(세로) : ${window.screen.availHeight}</h3>`)    //1040 (작업표시줄 뺀 값임~~)
+            
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

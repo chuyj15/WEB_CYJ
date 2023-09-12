@@ -1,0 +1,60 @@
+footer{
+    border: solid 0px red;
+    background-color: #292929;
+    font-family: 'Gothic A1', sans-serif;
+    overflow: hidden;
+}
+
+footer ul{
+    float: left;
+}
+
+footer > #footer_main{
+    margin-left: 330px;
+    margin-top: 40px;
+}
+
+footer > #footer_main li{
+    border: solid 0px gold;
+    width: 150px;
+    height: 22.39px;
+    color: #FFFFFF;
+    font-size: 14px;
+    margin-bottom:4px;
+}
+
+footer > #footer_main li:first-child{
+    color:#FFFF00
+}
+
+footer > #footer_info li{
+    border: solid 0px blue;
+    width: 400px;
+    height: 23px;
+    color: grey;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+
+footer > #footer_SNS li{
+    border: solid 0px olive;
+    float: left;
+}
+
+footer > #footer_SNS li:first-child{
+    margin-left: 180px;
+}
+
+footer > #footer_SNS img{
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    margin-left: 25px;
+    background-color: white;
+}
+
+footer > #footer_SNS .last_image{
+    width: 100px;
+    height: 70.42px;
+}
