@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .se2-container {
    margin-top: 100px;
     padding: 50px;
@@ -57,3 +63,65 @@
 .se2-container .img1 .dateheart #heart {
     float: right;
 }
+
+/*
+    section 3
+*/
+se3-container {
+}
+.section3 {
+    display: flex; justify-content: center;  margin: 100px; 
+    height: 400px; 
+}
+.sec3box {
+    padding: 30px; width: 600px;
+    display: flex;
+}
+#img3 {
+    width : 270px;
+     height : 300px; margin: 25px;
+}
+.textt {
+    position: relative;
+    height : 300px;
+    margin: 25px;
+}
+#fighting {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+
+/*
+    section 4
+*/
+se4-container {
+}
+.section4 {
+    display: flex; justify-content: center;  margin: 100px; 
+    height: 400px; 
+}
+.sec4box {
+    background-color: rgb(186, 204, 236);
+    padding: 30px; width: 600px;
+    display: flex;
+}
+#img4 {
+    width : 270px;
+     height : 300px; margin: 25px;
+}
+.textt2 {
+    position: relative;
+    height : 300px;
+    margin: 25px;
+}
+#fighting {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 70px;
+    height: 30px;
+    background-color: cornflowerblue;
+}
+
